@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/2D Arrays/2D Arrays.iml" filepath="$PROJECT_DIR$/2D Arrays/2D Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basic Sorting/Basic Sorting.iml" filepath="$PROJECT_DIR$/Basic Sorting/Basic Sorting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Basics/Basics.iml" filepath="$PROJECT_DIR$/Basics/Basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Binary Search/Binary Search.iml" filepath="$PROJECT_DIR$/Binary Search/Binary Search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pattern_Printing/Composite Pattern/Composite Pattern.iml" filepath="$PROJECT_DIR$/Pattern_Printing/Composite Pattern/Composite Pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Conditionals/Conditionals.iml" filepath="$PROJECT_DIR$/Conditionals/Conditionals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DSA.iml" filepath="$PROJECT_DIR$/DSA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Loops/Loops.iml" filepath="$PROJECT_DIR$/Loops/Loops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pattern_Printing/Pattern_Printing.iml" filepath="$PROJECT_DIR$/Pattern_Printing/Pattern_Printing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pattern_Printing/Special Pattern/Special Pattern.iml" filepath="$PROJECT_DIR$/Pattern_Printing/Special Pattern/Special Pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pattern_Printing/Square/Square.iml" filepath="$PROJECT_DIR$/Pattern_Printing/Square/Square.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Strings/Strings.iml" filepath="$PROJECT_DIR$/Strings/Strings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pattern_Printing/Triangle/Triangle.iml" filepath="$PROJECT_DIR$/Pattern_Printing/Triangle/Triangle.iml" />
+    </modules>
+  </component>
+</project>
