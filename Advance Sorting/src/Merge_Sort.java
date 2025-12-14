@@ -33,10 +33,10 @@ public class Merge_Sort {
         mergesort(b);
         //merge these 'a' and 'b'
         merge(a,b,arr);
-
+        a=null; b=null;  //to delete 'a' and 'b' after merging to improve space complexity (-0(N)-)
     }
     public static void main(String[] args) {
-        int [] arr={80,10,105,1,30,60,40,50,20};
+        int [] arr={80,10,105,1,90,60,40,50,20};
         print(arr);
         mergesort(arr);
         print(arr);
