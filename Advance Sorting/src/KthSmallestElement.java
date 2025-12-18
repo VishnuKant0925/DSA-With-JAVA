@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class KthSmallestElement {
     static int ans;
     public static void print(int[] arr){
@@ -51,13 +53,20 @@ public class KthSmallestElement {
 
     }
     public static void main(String[] args) {
-        int [] arr = {4,9,1,2,6,5,8};
-        int n = arr.length;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of array: ");
+        int n = sc.nextInt();
+        int [] arr = new int[n];
+        System.out.println("Enter the elements of array: ");
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        System.out.println("Enter the value of K ");
+        int k=sc.nextInt();
         print(arr);
-        int k=1;
-        ans=0;
+        ans=0;   // reinitialise the global variable
         quicksort(arr,0,n-1,k);
-        System.out.println(ans);
+        System.out.println("The "+k+"th smallest element is : "+ans);
 
     }
 }
