@@ -36,7 +36,7 @@ public class KthSmallestElement {
         }
         return correctIndex;
     }
-    public static void quicksort(int [] arr , int low ,int high,int k){
+    public static void quickSelect(int [] arr , int low ,int high,int k){
         if(low>high) return; // BASE CASE
         if(low==high){
            if(low==k-1) ans=arr[low];
@@ -48,8 +48,8 @@ public class KthSmallestElement {
             ans=arr[pivotIndex];
             return;
         }
-        if(pivotIndex>k-1)  quicksort(arr,low,pivotIndex-1,k);
-        else quicksort(arr,pivotIndex+1,high,k);
+        if(pivotIndex>k-1)  quickSelect(arr,low,pivotIndex-1,k);
+        else quickSelect(arr,pivotIndex+1,high,k);
 
     }
     public static void main(String[] args) {
@@ -65,7 +65,7 @@ public class KthSmallestElement {
         int k=sc.nextInt();
         print(arr);
         ans=0;   // reinitialise the global variable
-        quicksort(arr,0,n-1,k);
+        quickSelect(arr,0,n-1,k);
         System.out.println("The "+k+"th smallest element is : "+ans);
 
     }
