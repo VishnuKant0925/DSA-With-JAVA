@@ -1,14 +1,21 @@
 import java.util.Arrays;
 
 public class UniqueValue_InArray {
-    public static void main(String[] args) {
-        int[] arr={1,2,1,2,3,4,2,3,4,5,3,7,6};
-        int n = arr.length;
+    public static int findUnique(int[] arr) {
         Arrays.sort(arr);
-        for(int i=0;i<n-1;i++){
-            if(arr[i]!=arr[i+1]){
-                System.out.println("Unique element is :"+arr[i]);
+
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i += 2) {
+            if (arr[i] != arr[i + 1]) {
+                return arr[i];
             }
         }
+        return arr[n - 1];
+    }
+
+    public static void main(String[] args) {
+        int[] arr={2,4,2,4,6,3,3};
+        int unique=findUnique(arr);
+        System.out.println("Unique is :"+unique);
     }
 }
