@@ -1,0 +1,22 @@
+
+public class DisplayLinkedList {
+    public static void main(String[] args) {
+        Node a = new Node(80);
+        Node b = new Node(20);
+        Node c = new Node(30);
+        Node d = new Node(40);
+        Node e = new Node(50);
+        //Linking of node
+        a.next=b;     // 10 => 20
+        b.next=c;     // 10 => 20  => 30
+        c.next=d;     // 10 => 20  => 30 => 40
+        d.next=e;     // 10 => 20  => 30 => 40 => 50
+
+        //displaying using while loop
+        Node temp= a;
+        while (temp !=null){
+            System.out.print(temp.val+" ");
+            temp=temp.next;
+        }
+    }
+}
