@@ -1,5 +1,17 @@
 
 public class DisplayLinkedList {
+    public static void recursiveDisplay(Node head){
+        if(head==null) return;
+        System.out.println(head.val);
+        recursiveDisplay(head.next);
+    }
+    public static void Display(Node head){
+        Node temp= head;
+        while (temp !=null){
+            System.out.print(temp.val+" ");
+            temp=temp.next;
+        }
+    }
     public static void main(String[] args) {
         Node a = new Node(80);
         Node b = new Node(20);
@@ -12,11 +24,8 @@ public class DisplayLinkedList {
         c.next=d;     // 10 => 20  => 30 => 40
         d.next=e;     // 10 => 20  => 30 => 40 => 50
 
-        //displaying using while loop
-        Node temp= a;
-        while (temp !=null){
-            System.out.print(temp.val+" ");
-            temp=temp.next;
-        }
+        Display(a);   //displaying using while loop
+        System.out.println();
+        recursiveDisplay(a); // displaying using recursion
     }
 }
