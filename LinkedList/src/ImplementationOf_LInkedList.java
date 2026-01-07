@@ -29,7 +29,7 @@ class SinglyLinkedList{
             insertAtEnd(val);
             return;
         }
-        if(idx>size){
+        if(idx>size || idx<0){
             System.out.println("Invalid Index ");
             return;
         }
@@ -42,6 +42,64 @@ class SinglyLinkedList{
         temp.next=x.next;
         x.next=temp;
         size++;
+    }
+
+    int get(int idx){
+        if(idx==size-1) return tail.val;
+        if(idx>=size || idx<0){
+            System.out.println("Invalid Index");
+            return -1;
+        }
+        Node temp = head;
+        for(int i=1;i<=idx;i++){
+            temp=temp.next;
+        }
+        return temp.val;
+    }
+    void set(int idx, int val){
+        if(idx==size-1) {
+            tail.val=val;
+            return;
+        }
+        if(idx>=size || idx<0){
+            System.out.println("Invalid Index");
+            return ;
+        }
+        Node temp = head;
+        for(int i=1;i<=idx;i++){
+            temp=temp.next;
+        }
+        temp.val=val;
+    }
+    void deleteAtHead(){
+        if(head==null){
+            System.out.println("List is empty");
+            return;
+        }
+        head=head.next;
+        size--;
+    }
+    void delete(int idx){
+        if(idx==0){
+            deleteAtHead();
+            return;
+        }
+        if(head==null){
+            System.out.println("List is empty ");
+            return;
+        }
+        if(idx<0 || idx>=size){
+            System.out.println("Invalid Index");
+            return;
+        }
+        Node temp = head;
+        for(int i=1; i<=idx-1;i++){
+            temp=temp.next;
+        }
+        if(temp.next==tail) tail = temp;
+        temp.next = temp.next.next;
+        size--;
+
     }
     void size(){
         System.out.println("Length of LinkedList is :"+size);
@@ -71,6 +129,11 @@ public class ImplementationOf_LInkedList {
          list.insert(5,10);
          list.size();
          list.display();
+        // System.out.println(list.get(2));
+        list.set(0,102);
+        list.display();
+        list.delete(3);
+        list.display();
 
     }
 }
