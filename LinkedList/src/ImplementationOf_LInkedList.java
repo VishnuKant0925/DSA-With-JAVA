@@ -20,6 +20,29 @@ class SinglyLinkedList{
         }
         size++;
     }
+    void insert(int idx , int val){
+        if(idx==0){
+            insertAtHead(val);
+            return;
+        }
+        if(idx==size){
+            insertAtEnd(val);
+            return;
+        }
+        if(idx>size){
+            System.out.println("Invalid Index ");
+            return;
+        }
+        Node temp = new Node(val);
+        Node x = head;
+
+        for(int i=1;i<=idx-1;i++){
+            x=x.next;
+        }
+        temp.next=x.next;
+        x.next=temp;
+        size++;
+    }
     void size(){
         System.out.println("Length of LinkedList is :"+size);
     }
@@ -40,9 +63,14 @@ public class ImplementationOf_LInkedList {
          list.insertAtEnd(70);
          list.insertAtEnd(80);
          list.insertAtEnd(30);
+         list.insertAtHead(-90);
+         list.insert(2,100);
+         list.display();
+         list.insert(10,100);
+
+         list.insert(5,10);
          list.size();
          list.display();
-         list.insertAtHead(-90);
-         list.display();
+
     }
 }
