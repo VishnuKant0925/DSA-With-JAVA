@@ -97,6 +97,52 @@ class DLL{
         temp.pre=temp.pre.pre;
         size--;
     }
+    void set (int idx,int val){
+        if(head==null){
+            System.out.println("List is empty");
+            return;
+        }
+        if(idx<0 || idx>=size){
+            System.out.println("Invalid index");
+            return;
+        }
+        DNode temp = head;
+        if(idx==0) {
+            head.val=val;
+            return;
+        }
+        if(idx==size-1){
+            tail.val=val;
+            return;
+        }
+        for(int i=1;i<=idx;i++){
+            temp=temp.next;
+        }
+        temp.val=val;
+    }
+    void  get (int idx){
+        if(head==null){
+            System.out.println("List is empty");
+            return ;
+        }
+        if(idx==size-1){
+            System.out.println(tail.val);
+            return;
+        }
+        if(idx == 0){
+            System.out.println(head.val);
+            return;
+        }
+        if(idx<0 || idx>=size){
+            System.out.println("Invalid index");
+            return ;
+        }
+        DNode temp = head;
+        for(int i=1;i<=idx;i++){
+            temp=temp.next;
+        }
+        System.out.println(temp.val);
+    }
 }
 public class DoublyLinkedListDataStructure {
     public static void main(String[] args) {
@@ -106,7 +152,8 @@ public class DoublyLinkedListDataStructure {
         list.insertAtHead(5);
         list.display();
         list.insert(2,60);
-        list.delete(1);
+        list.set(2,100);
         list.display();
+        list.get(2);
     }
 }
