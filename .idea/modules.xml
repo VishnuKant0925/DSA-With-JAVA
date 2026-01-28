@@ -18,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/Recursion/Recursion.iml" filepath="$PROJECT_DIR$/Recursion/Recursion.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pattern_Printing/Special Pattern/Special Pattern.iml" filepath="$PROJECT_DIR$/Pattern_Printing/Special Pattern/Special Pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pattern_Printing/Square/Square.iml" filepath="$PROJECT_DIR$/Pattern_Printing/Square/Square.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stack/Stack.iml" filepath="$PROJECT_DIR$/Stack/Stack.iml" />
       <module fileurl="file://$PROJECT_DIR$/Strings/Strings.iml" filepath="$PROJECT_DIR$/Strings/Strings.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pattern_Printing/Triangle/Triangle.iml" filepath="$PROJECT_DIR$/Pattern_Printing/Triangle/Triangle.iml" />
     </modules>
