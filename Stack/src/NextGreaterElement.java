@@ -21,7 +21,7 @@ public class NextGreaterElement
         st.push(arr[n-1]);
         for(int i=n-2;i>=0;i--){
             while(!st.isEmpty() && st.peek()<=arr[i]) st.pop();
-            ans[i]=st.peek();
+            ans[i] = st.isEmpty()?-1 : st.peek();
             st.push(arr[i]);
         }
         for(int i=0;i<n;i++){
