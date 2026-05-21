@@ -1,5 +1,9 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
 
 public class Traversal {
+    static int  n;
     static class Node{
         int val;
         Node left;
@@ -14,6 +18,32 @@ public class Traversal {
         display(root.left);
         display(root.right);
     }
+    private static int levelOfTree(Node root){
+        if(root==null) return 0;
+        return 1 + Math.max( levelOfTree(root.left) , levelOfTree(root.right) );
+    }
+
+    private static void LevelOrderTraversal(Node root){
+        Queue<Node> q = new LinkedList<>();
+        if(root != null) q.add(root);
+        while(!q.isEmpty()){
+            Node front = q.remove();
+            System.out.print(front.val+" ");
+            if(front.left != null) q.add(front.left);
+            if(front.right != null) q.add(front.right);
+        }
+    }
+
+    private static void nthLevel(Node root ,int level){
+        if(root==null) return ; // base-case
+        if(level == n ){
+            // we are arrived at the level which is to be printed
+            System.out.print(root.val+" ");
+        }
+        nthLevel(root.left,level+1);
+        nthLevel(root.right ,level+1);
+    }
+
     private static void preorder(Node root){
         if(root==null) return ; // base-case
         System.out.print(root.val+" ");
@@ -59,6 +89,7 @@ public class Traversal {
     }
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         Node a = new Node(1); // a is root
         Node b = new Node(2);
         Node c = new Node(3);
@@ -84,5 +115,17 @@ public class Traversal {
         System.out.println();
         System.out.print("Postorder: ");
         postorder(a);
+        System.out.println();
+        System.out.println("Enter the level to printed (root consider as 0) :");
+        n = sc.nextInt();
+        nthLevel(a,0);
+        System.out.println();
+        // level order traversal using nthLevel() code
+        int lvl = levelOfTree(a);
+        for(int x=0;x<=lvl;x++){
+            n=x;
+            nthLevel(a,0);
+            System.out.println();
+        }
     }
 }
